@@ -1,6 +1,6 @@
 {
   "name": "wesyer-js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Automatize all of your tasks",
   "main": "wesyer.js",
   "scripts": {

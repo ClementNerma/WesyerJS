@@ -352,7 +352,23 @@ Wesyer.task('install', function() {
 
     if(!argument('l', 'local')) {
 
-        var http = config.modules.repository + '/' + args[0] + '/archive.zip';
+        var json = readFile(path.join('.wesyer', args[0], 'package.json'));
+
+        if(typeof json === 'undefined')
+            return console.error(colors.red('Can\'t open ') + colors.green('package.json') + colors.red(' file'));
+
+        try {
+            json = JSON.parse(json);
+        }
+
+        catch(e) {
+            return console.error(colors.green('package.json') + colors.red(' is not a valid JSON file' + (config.verbose ? '\n' + e.stack : '')));
+        }
+
+        if(!json.modules || !json.modules.repository)
+            return console.error(colors.red('This package hasn\'t been installed from repository, but from a ZIP archive.\nOnly modules downloaded from repositories can be updated !'));
+
+        var http = json.modules.repository + '/' + args[0] + '/archive.zip';
 
         console.info(colors.yellow.bgGreen.bold('WY') + ' ' + colors.yellow.bgBlue.bold('GET') + ' ' + colors.cyan.bold(http));
 
