@@ -1,0 +1,36 @@
+{
+  "name": "wesyer-js",
+  "version": "1.0.0",
+  "description": "Automatize all of your tasks",
+  "main": "wesyer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "taskfile.js",
+    "wesyer.js"
+  ],
+  "bin": {
+    "wy": "wesyer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClementNerma/WesyerJS"
+  },
+  "keywords": [
+    "automatize",
+    "tasks"
+  ],
+  "author": "Clement Nerma",
+  "license": "CC-BY-NC-ND-4.0",
+  "bugs": {
+    "url": "https://github.com/ClementNerma/WesyerJS/issues"
+  },
+  "dependencies": {
+    "chalk": "latest",
+    "glob": "latest",
+    "sync-prompt": "latest",
+    "node-zip": "latest",
+    "download": "latest"
+  }
+}
