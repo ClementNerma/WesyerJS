@@ -45,7 +45,7 @@ You will be asked about informations :
  server encoding | false     | The file encoding for the server's pages
  server verbose  | false     | Set the server verbose
 
-*NOTE :* Hold ```Return``` (or ```Entrée```) key will set the default value to the asked property (this value is writed in green)
+**NOTE :** Hold ```Return``` (or ```Entrée```) key will set the default value to the asked property (this value is writed in green)
 
 If you perform a ```ls -a``` on this new directory, you can see that one folder and one file has been created.
 
@@ -157,7 +157,7 @@ The ```pipe``` command permit to *pass* the file to a module (here, the module w
 And the ```out``` command permit to write the result of the work in a directory.
 This last function is a little bit complicated than others :
 
-- We've choosed to works on every file in the ```src``` folder
+- We've choosed to works on all files in the ```src``` folder
 - We've *piped* them with the ```test-module``` module
 - We want to write these files on the ```out``` folder
 
@@ -181,16 +181,17 @@ Enjoy !
 
 You perhaps want to do other things that replace ```__FILE__``` by a path in all of your files !
 
-So, let's see how to create a new module. Our module will replace ```the author``` by ```ME``` in all files
+So, let's see how to create a new module. Our module will replace ```the author``` by ```ME``` in all files (that's for the example)
 
 First, use the following command :
 
 ```
+cd ..
 wy create-module my-module
 cd my-module
 ```
 
-*NOTE :* I don't describe it the asked properties of the module because they are very simples.
+**NOTE :** I don't describe it the asked properties of the module because they are very simples.
 
 Open the ```package.json``` file. It contains the following content :
 
