@@ -17,7 +17,7 @@ npm install wesyer-js -g
 **NOTE :** The *-g* argument install WesyerJS globally. This permit to use WesyerJS everywhere and access to the 'wy' command.
 
 ## How to use
-*All of these commands needs to have installed WesyerJS globally with *-g* argument*
+*All of these commands needs to have installed WesyerJS globally with* -g *argument*
 
 ### Step 1 - Create a project
 
@@ -45,7 +45,7 @@ You will be asked about informations :
  server encoding | false     | The file encoding for the server's pages
  server verbose  | false     | Set the server verbose
 
-**NOTE :** Hold ```Return``` (or ```Entrée```) key will set the default value to the asked property (this value is writed in green)
+**NOTE :** Hold ```Return``` (or ```Entrée```) key will set the default value to the asked property (this value is written in green)
 
 If you perform a ```ls -a``` on this new directory, you can see that one folder and one file has been created.
 
@@ -163,7 +163,7 @@ This last function is a little bit complicated than others :
 
 If you don't pass the ```{root: true}``` object to the command, WesyerJS will try to write our ```test.txt``` file on this path : ```out/src/test.txt```
 The ```{root: true}``` argument say to WesyerJS *"Write these files at the root of the output directory !"*
-So our file will be writed to ```out/test.txt```
+So our file will be to ```out/test.txt```
 
 Now, run the task by running ```wy``` in your terminal.
 
