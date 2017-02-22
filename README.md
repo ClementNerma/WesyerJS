@@ -2,11 +2,11 @@
 # WesyerJS
 
 WesyerJS is a NodeJS tool that permit you to automatize all of your tasks.
-It permit to perform operations on files and write the result in other files.
+It permits to perform operations on files and write the result in other files.
 
 ## How to install
 
-To install WesyerJS, you first needs to install the [NodeJS Package Manager (npm)](https://www.npmjs.com/).
+To install WesyerJS, you first need to install the [NodeJS Package Manager (npm)](https://www.npmjs.com/).
 
 Then, type the following command in your terminal :
 
@@ -14,7 +14,7 @@ Then, type the following command in your terminal :
 npm install wesyer-js -g
 ```
 
-**NOTE :** The *-g* argument install WesyerJS globally. This permit to use WesyerJS everywhere and access to the 'wy' command.
+**NOTE :** The *-g* argument installs WesyerJS globally. This permits to use WesyerJS everywhere and access to the 'wy' command.
 
 ## How to use
 *All of these commands needs to have installed WesyerJS globally with* -g *argument*
@@ -29,7 +29,7 @@ wy init my-project
 cd my-project
 ```
 
-**NOTE :** You can replace *my-project* by another name
+**NOTE :** Replace *my-project* by your project's name
 
 You will be asked about informations :
 
@@ -38,12 +38,12 @@ You will be asked about informations :
  description     | true      | The description of your project
  author          | true      | The author of the project
  license         | true      | The license of the project
- verbose         | false     | Choose if WesyerJS has to say you all about errors - That can be interesting for development
+ verbose         | false     | Choose if WesyerJS has to say you all about errors (development)
  server port     | false     | If you choose to create a local server to test your pages, the port to use
- root file       | false     | The file to deliver to client when he request server for the root page (/)
+ root file       | false     | The file to deliver to the client when he asks for the root page (/)
  encoding        | false     | The encoding of all files in your project
  server encoding | false     | The file encoding for the server's pages
- server verbose  | false     | Set the server verbose
+ server verbose  | false     | Make the server verbose
 
 **NOTE :** Hold ```Return``` (or ```Entrée```) key will set the default value to the asked property (this value is written in green)
 
@@ -84,7 +84,7 @@ For that, open the ```taskfile.js``` file in your favorite code editor, and add 
 
 ```javascript
 Wesyer.task('default', function() {
-	console.log('This task works great !');
+  console.log('This task works great !');
 });
 ```
 
@@ -98,7 +98,7 @@ If you see a message ```This task works great !``` in your console, then all wor
 
 #### Explanations
 
-We have create a task by using ```Wesyer.task()``` function. This function require two parameters : the name of the task, and the callback.
+We have created a task by using ```Wesyer.task()``` function. This function requires two parameters : the name of the task, and the callback.
 To run a task, you have to type ```wy <taskname>``` in your terminal. But if you don't type a task name, the **default** task will be runned.
 
 ### Step 3 - Download a module
@@ -141,20 +141,18 @@ Then, edit the ```default``` task (in ```taskfile.js```) and replace it content 
 
 ```javascript
 Wesyer.task('default', function() {
-	
-	Wesyer
-		.for('src/*')
-		.pipe('test-module')
-		.out('out/', {root: true})
-
+  Wesyer
+    .for('src/*')
+    .pipe('test-module')
+    .out('out/', {root: true})
 });
 ```
 
 #### Explanations
 
-To work on files, you need to say it to WesyerJS. The ```for``` command permit to select files.
-The ```pipe``` command permit to *pass* the file to a module (here, the module we've downloaded before).
-And the ```out``` command permit to write the result of the work in a directory.
+To work on files, you need to say it to WesyerJS. The ```for``` command permits to select files.
+The ```pipe``` command permits to *pass* the file to a module (here, the module we've downloaded before).
+And the ```out``` command permits to write the result of the work in a directory.
 This last function is a little bit complicated than others :
 
 - We've choosed to works on all files in the ```src``` folder
@@ -210,7 +208,7 @@ Open the ```package.json``` file. It contains the following content :
 ```
 
 The ```files``` field contains all files that your module will use.
-The ```main``` field indicate what is the main file of your module.
+The ```main``` field indicates what is the main file of your module.
 
 Now, open the ```index.js``` file. It is empty. But we will write it ;-) !
 
@@ -229,7 +227,7 @@ Simple, isn't ?
 ```input``` is an instance of ```Wesyer.File``` that represents the input file (such as ```src/my-test-file.txt```).
 This is always a **single** file.
 
-The ```apply``` function permit to get the content of the file and perform operations on. We've replaced all ```the author``` by ```me``` in this content, and we've returned it.
+The ```apply``` function permits to get the content of the file and perform operations on. We've replaced all ```the author``` by ```me``` in this content, and we've returned it.
 The returned content will in fact overwrite the old file content.
 
 Our module is now ready to be used in a project !
@@ -261,14 +259,19 @@ You can now use the ```my-module``` module in your tasks !
 
 # License
 
-This project is under the license Creative Commons Attribution 4.0 International - No commercial - No derivative terms (see more at http://creativecommons.org/licenses/by-nc-nd/4.0/)
+This project is under the license Creative Commons Attribution 4.0 International - No commercial - No derivative terms (see more at http://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 # Wiki
 
 Let's see the wiki !
 You can find it at https://github.com/ClementNerma/WesyerJS/wiki
 
-# Bugs and data lost
+# Disclaimer
 
-I'm not responsible for any damage caused to your computer by WesyerJS, including data lost, bugs, etc.
-(Even if all will works great ;-) !)
+The software is provided "as is" and the author disclaims all warranties
+with regard to this software including all implied warranties of
+merchantability and fitness. In no event shall the author be liable for
+any special, direct, indirect, or consequential damages or any damages
+whatsoever resulting from loss of use, data or profits, whether in an action
+of contract, negligence or other tortious action, arising out of or in
+connection with the use or performance of this software.
