@@ -259,7 +259,7 @@ You can now use the ```my-module``` module in your tasks !
 
 # License
 
-This project is under the [GNU GPL license](LICENSE.md).
+This project is under the [GNU GPL license](LICENSE.md) terms.
 
 # Wiki
 
